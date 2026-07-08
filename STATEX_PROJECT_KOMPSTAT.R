@@ -8,7 +8,8 @@ ui <- navbarPage(
     bootswatch = "flatly",
     primary = "#0B3C8C"
   ),
-  
+
+#isi tampilan home  
   tabPanel(
     "Home",
     br(),
@@ -42,3 +43,6 @@ ui <- navbarPage(
     )
   )
 )
+
+#server
+server <- function(input, output, session){}
