@@ -46,3 +46,51 @@ ui <- navbarPage(
 
 #server
 server <- function(input, output, session){}
+
+library(shiny)
+library(bslib)
+
+#=========================
+# UI
+#=========================
+ui <- navbarPage(
+  title = "STATEX",
+  theme = bs_theme(
+    bootswatch = "flatly",
+    primary = "#0B3C8C"
+  ),
+  
+  #=========================
+  # MATERI
+  #=========================
+  tabPanel(
+    "Materi",
+    br(),
+    h3("Mean"),
+    p("Rata-rata data."),
+    h3("Median"),
+    p("Nilai tengah data."),
+    h3("Modus"),
+    p("Nilai yang paling sering muncul."),
+    h3("Varians"),
+    p("Ukuran penyebaran data terhadap rata-rata."),
+    h3("Standar Deviasi"),
+    p("Akar dari varians."),
+    h3("IQR"),
+    p("Selisih antara Q3 dan Q1."),
+    h3("Skewness"),
+    p("Ukuran kemencengan distribusi."),
+    h3("Kurtosis"),
+    p("Ukuran keruncingan distribusi.")
+  )
+)
+
+#=========================
+# SERVER
+#=========================
+server <- function(input, output, session){}
+
+#=========================
+# JALANKAN APLIKASI
+#=========================
+shinyApp(ui, server)
