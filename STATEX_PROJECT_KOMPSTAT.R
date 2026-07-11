@@ -92,3 +92,5 @@ server <- function(input, output, session){
       hasil <- paste(hasil, "Data relatif heterogen.")}
     hasil})}
 
+#Mengoperasikan Visualisasi dan Statistika Deskriptif
+shinyApp(ui, server)
